@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:screenOrientation="portrait"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="请输入预计行程时间：     请输入目的地："
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textSize="16sp" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_below="@id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:screenOrientation="portrait"
+        android:clickable="true" />
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="25dp"
+        android:visibility="gone"
+        android:layout_marginTop="10dip" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/editText1"
+        android:text="分钟"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/bmapView"
+        android:ems="10"
+        android:inputType="time"
+        android:textSize="5dp" />
+
+    <Button
+        android:id="@+id/button2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText2"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignParentRight="true"
+        android:text="完成"
+        android:textSize="8dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bmapView"
+        android:layout_toLeftOf="@+id/button2"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:textSize="11dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:layout_toLeftOf="@+id/button2"
+        android:text="已到达" />
+
+</RelativeLayout>
